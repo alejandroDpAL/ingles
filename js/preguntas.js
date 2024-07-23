@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		69: "Ask someone from your class for help or even check online resources.",
 		70: "Getting Advice on Improving your English",
 		/* Parte cinco */
-		71: "nationwide",
+		71: ["is","nationwide"],
 		77: "foreign",
 		73: "in",
 		74: "its",
