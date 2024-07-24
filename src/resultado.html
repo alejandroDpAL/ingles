@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="../js/preguntas.js"></script>
+    <link rel="stylesheet" href="../css/preguntas.css">
+</head>
+<!-- hola zona -->
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
+    
+    <div class="flex flex-col items-center mt-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl mb-8 text-center">
+            Hola <span id="usernameDisplay"></span>
+        </h1>
+        <label class="block mt-8 text-center">Tus resultados en la prueba</label>
+        <p class="text-center">
+            En esta prueba has tenido una puntuación de <span id="score">0</span> de 100
+        </p>
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="mt-4 my-4 w-full max-w-xs mx-auto"
+            disabled
+        />
+        <p class="text-center">Tus Respuestas</p>
+        <table class="table-auto mt-4 w-full max-w-4xl mx-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Pregunta</th>
+                    <th class="px-4 py-2">Tus respuestas.</th>
+                </tr>
+            </thead>
+            <tbody class="bg-gray-900 text-white">
+                <!-- Aquí se insertarán las respuestas -->
+            </tbody>
+        </table>
+		<div class="w-full max-w-4xl mt-8 mx-auto">
+			<table class="rounded-lg border border-gray-400 w-full">
+				<thead>
+					<tr>
+						<th class="bg-red-600 border border-gray-400 px-4 py-2" colspan="2">Nivel</th>
+						<th class="bg-red-600 border border-gray-400 px-4 py-2">Puntos</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2" rowspan="3">PRE A1</td>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">Low</td>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">0 - 10</td>
+					</tr>
+					<tr>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">Mid</td>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">11 - 20</td>
+					</tr>
+					<tr>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">High</td>
+						<td class="bg-red-500 border border-gray-400 px-4 py-2">21 - 30</td>
+					</tr>
+					<tr>
+						<td class="bg-purple-600 border border-gray-400 px-4 py-2" rowspan="2">A1</td>
+						<td class="bg-purple-600 border border-gray-400 px-4 py-2">A1.1</td>
+						<td class="bg-purple-600 border border-gray-400 px-4 py-2">31 - 45</td>
+					</tr>
+					<tr>
+						<td class="bg-purple-600 border border-gray-400 px-4 py-2">A1.2</td>
+						<td class="bg-purple-600 border border-gray-400 px-4 py-2">46 - 60</td>
+					</tr>
+					<tr>
+						<td class="bg-purple-700 border border-gray-400 px-4 py-2" rowspan="2">A2</td>
+						<td class="bg-purple-700 border border-gray-400 px-4 py-2">A2.1</td>
+						<td class="bg-purple-700 border border-gray-400 px-4 py-2">61 - 70</td>
+					</tr>
+					<tr>
+						<td class="bg-purple-700 border border-gray-400 px-4 py-2">A2.2</td>
+						<td class="bg-purple-700 border border-gray-400 px-4 py-2">71 - 80</td>
+					</tr>
+					<tr>
+						<td class="bg-blue-600 border border-gray-400 px-4 py-2" rowspan="2">B1</td>
+						<td class="bg-blue-600 border border-gray-400 px-4 py-2">B1.1</td>
+						<td class="bg-blue-600 border border-gray-400 px-4 py-2">81 - 90</td>
+					</tr>
+					<tr>
+						<td class="bg-blue-600 border border-gray-400 px-4 py-2">B1.2</td>
+						<td class="bg-blue-600 border border-gray-400 px-4 py-2">91 - 100</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+        <div class="flex justify-center px-4 py-2 bg-green-500 text-white mt-8 rounded-md hover:bg-green-600 hover:text-white mb-4">
+            <a href="../index.html" class="no-underline text-white">Repetir prueba</a>
+        </div>
+    </div>
+</body>
+</html>

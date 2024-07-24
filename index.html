@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="google" value="notranslate" />
+  </head>
+  <body
+    class="bg-gray-900 flex justify-center items-center h-screen overflow-hidden"
+  >
+    <div
+      class="bg-gray-800 text-white p-4 rounded-lg shadow-md w-full max-w-6xl mx-auto sm:max-w-5xl md:max-w-4xl lg:max-w-4xl flex flex-col items-center"
+    >
+      <div class="w-full flex justify-between items-center mb-2">
+        <img
+          src="../img/personaM.png"
+          alt="Left Person"
+          class="h-16 w-full object-contain sm:h-24 md:h-32 lg:h-44"
+        />
+        <div class="text-center mx-2">
+          <h1 class="text-lg font-bold mb-2">Welcome to our testing section</h1>
+          <p class="text-sm mb-1">
+            where you will be able to assess your English level.
+          </p>
+          <p class="text-sm mb-1">
+            This test has 3 sections:
+            <strong>Language Use (Grammar & Vocabulary)</strong>,
+            <strong>Reading</strong>, and <strong>Listening</strong>, and it
+            will take you about 1 hour and 45 minutes to finish.
+          </p>
+          <p class="text-sm mb-1">
+            Read the instructions carefully before you start each section.
+          </p>
+          <p class="text-sm mb-1">
+            Take your time and don't hurry. There is plenty of time to answer
+            all the questions.
+          </p>
+          <p class="text-sm"><strong>Good luck!</strong></p>
+        </div>
+        <img
+          src="../img/logo transparente.png"
+          alt="Right Person"
+          class="h-12 w-full object-contain sm:h-16 md:h-24 lg:h-44"
+        />
+      </div>
+      <div class="w-full mt-4">
+        <h2 class="text-base font-semibold mb-2">Write your:</h2>
+        <form class="space-y-4 w-full max-w-3xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="full_name" class="block text-sm mb-1"
+                >Full name:</label
+              >
+              <input
+                type="text"
+                id="full_name"
+                class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label for="training_program" class="block text-sm mb-1"
+                >Training program:</label
+              >
+              <input
+                type="text"
+                id="training_program"
+                class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label for="training_center" class="block text-sm mb-1"
+                >Training Center:</label
+              >
+              <input
+                type="text"
+                id="training_center"
+                class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm mb-1">Email:</label>
+              <input
+                type="email"
+                id="email"
+                class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label for="cellphone" class="block text-sm mb-1"
+                >Cellphone:</label
+              >
+              <input
+                type="text"
+                id="cellphone"
+                class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label for="test_date" class="block text-sm mb-1"
+                >Test Date:</label
+              >
+              <input
+                type="date"
+                id="test_date"
+                class="w-[370px] p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm"
+              />
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button
+              type="button"
+              onclick="storeData()"
+              class="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
+            >
+              Start test
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/validacion.js"></script>
+  </body>
+</html>
