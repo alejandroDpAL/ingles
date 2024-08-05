@@ -177,19 +177,30 @@ function updateScore(value) {
 }
 
 function loadUserName() {
-    const userData = JSON.parse(localStorage.getItem("userData"));
-    const fullName = userData ? userData.fullName : "Usuario";
-    document.getElementById("usernameDisplay").innerText = fullName;
+	const userData = JSON.parse(localStorage.getItem("userData"));
+	const fullName = userData ? userData.fullName : "Usuario";
+	document.getElementById("usernameDisplay").innerText = fullName;
 }
 
-
 function loadResults() {
-	const score = parseInt(localStorage.getItem("score"));
+	// Obtén el puntaje y las respuestas del usuario desde el localStorage
+	const score = parseInt(localStorage.getItem("score"), 10); // Asegúrate de convertir a entero
 	const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
 
-	// Calcula el porcentaje basado en el número total de preguntas
-	const totalQuestions = 85; // Número total de preguntas
-	const percentageScore = score ? (score / totalQuestions) * 100 : 0;
+	// Número total de preguntas
+	const totalQuestions = 85; // Ajusta este valor si es diferente
+
+	// Depuración: Verifica los valores obtenidos
+	console.log(`Score: ${score}`);
+	console.log(`Total Questions: ${totalQuestions}`);
+
+	// Calcula el porcentaje del puntaje
+	const percentageScore = (score / totalQuestions) * 100;
+
+	// Verifica el valor calculado
+	console.log(`Percentage Score: ${percentageScore}`);
+
+	// Muestra el puntaje en porcentaje en el elemento con id "score"
 	document.getElementById("score").innerText = Math.round(percentageScore);
 
 	// Ajusta el valor del input range según el puntaje y lo deshabilita
@@ -315,8 +326,31 @@ function loadResults() {
 		tbody.appendChild(row);
 	});
 }
+// Función para mostrar los nombres guardados
+function showStoredNames() {
+	const storedNames = JSON.parse(localStorage.getItem("names")) || [];
+	if (storedNames.length > 0) {
+		const answerContainer = document.createElement("div");
+		answerContainer.className = "answer-container"; // Ajusta según tus necesidades
 
+		storedNames.forEach((name) => {
+			const answerCell = document.createElement("div");
+			answerCell.className = "border px-4 py-2 flex items-center";
+			answerCell.innerHTML = `<p>Nombre: ${name}</p>`;
+			answerContainer.appendChild(answerCell);
+		});
+
+		document.body.appendChild(answerContainer); // Ajusta según donde quieras mostrarlo
+	}
+}
+
+// Llamar a la función para mostrar los nombres al cargar la página
 window.onload = () => {
+	showStoredNames();
 	loadUserName();
 	loadResults();
 };
+
+/* 
+loadUserName();
+loadResults(); */
